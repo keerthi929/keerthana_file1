@@ -1,0 +1,46 @@
+#1)
+
+import cv2
+img = cv2.imread('g4g.png')  
+cv2.imshow('image', img)  
+cv2.waitKey(0)         
+cv2.destroyAllWindows()  
+
+
+#2)
+
+import os
+from PyPDF2 import PdfFileMerger
+
+source_dir = os.getcwd()
+
+merger = PdfFileMerger()
+
+for item in os.listdir(source_dir):
+    if item.endswith('pdf'):
+        merger.append(item)
+
+merger.write('./Output/Lecture Complete.pdf')       
+merger.close()
+
+
+#3)
+import requests
+import MySQLdb
+from bs4 import BeautifulSoup
+HOST = "localhost"
+USERNAME = "scraping_user"
+PASSWORD = ""
+DATABASE = "scraping_sample"
+url_to_scrape = 'https://howpcrules.com/sample-page-for-web-scraping/'
+plain_html_text = requests.get(url_to_scrape)
+soup = BeautifulSoup(plain_html_text.text, "html)
+
+4)
+
+select distinct my_id
+from my_table where my_id IN (1,2,3)  --csv list of id's
+and not exists 
+(select my_id
+   from my_table 
+   where my_id IN (1,2,3) and field2 is null)
