@@ -1,0 +1,60 @@
+
+#1)
+import json
+# a Python object (dict):
+x = {  "name": "John", "age": 30,
+  "city": "New York"
+}
+print(x)
+
+
+#2)
+
+import json
+# a Python object (list):
+x = [10,20,30,40,55,67,89]
+print(x)
+
+
+
+#3)
+
+import json
+# a Python object (tpl):
+x = (10,20,30,40,50)
+print(x)
+
+
+#4)
+
+import json
+# a Python object (string):
+x = "Python","is","good ","programming","language"
+print(x)
+
+#5)
+
+import json
+# a Python object (int):
+x,y,z=10,30,50
+# convert into JSON:
+a= json.dumps(x)
+
+# the result is a JSON string:
+print(a)
+
+
+#6)
+
+import json
+# a Python object (float):
+x,y,z=1.4,4.5,6.3
+b = json.dumps(z)
+print(b)
+
+
+
+
+
+
+
