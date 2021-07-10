@@ -1,0 +1,63 @@
+
+#1)
+from datetime import datetime
+
+a= datetime.strptime('Aug 15 2014 2:43PM', '%b %d %Y %I:%M%p')
+
+print(a)
+
+
+#output
+
+2014-08-15 14:43:00
+
+[Program finished]
+
+
+#2)
+
+from datetime import date, timedelta
+dt = date.today() - timedelta(5)
+print('Current Date :',date.today())
+print('5 days before Current Date :',dt)
+
+#output
+
+Current Date : 2021-07-10
+5 days before Current Date : 2021-07-05
+
+[Program finished]
+
+
+#3)
+from datetime import date
+from datetime import datetime
+dt = date.today()
+print(datetime.combine(dt, datetime.min.time()))
+
+#output
+
+2021-07-10 00:00:00
+
+[Program finished]
+
+
+
+#4)
+import datetime
+base = datetime.datetime.today()
+for x in range(0, 7):
+      print(base + datetime.timedelta(days=x))
+	  
+	  
+	  #output
+	  
+2021-07-10 15:18:07.955496
+2021-07-11 15:18:07.955496
+2021-07-12 15:18:07.955496
+2021-07-13 15:18:07.955496
+2021-07-14 15:18:07.955496
+2021-07-15 15:18:07.955496
+2021-07-16 15:18:07.955496
+
+[Program finished]
